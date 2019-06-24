@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录</title>
+    <script src="js/autoRem.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_left" id="back"><img src="images/back.png" alt=""></div>
+        <div class="head_center"><span class="head_title">手机号登录</span></div>
+        <div class="head_right"></div>
+    </div>
+    <hr>
+
+    <ul id="form">
+        <li id="phone">
+            <span>手机号</span>
+            <input type="text" id="user" placeholder="+86 请输入手机号">
+            <span id="del">×</span>
+        </li>
+        <li id="pass">
+            <input type="password" id="password" placeholder="请输入密码">
+        </li>
+    </ul>
+
+    <div id="btn">
+        <li class="err_tip"></li>
+        <a id="login">登录</a>
+        <a id="forget">忘记密码?</a>
+    </div>
+
+    <div id="he">
+        <b></b>
+        <span>合作账号快速注册</span>
+        <b></b>
+    </div>
+
+    <div id="icon">
+        <div>
+            <a href="" class="circle"><img src="images/w_1.png" alt=""></a>
+            <a href="">微博</a>
+        </div>
+        <div>
+            <a href="" class="circle"><img src="images/w_2.png" alt=""></a>
+            <a href="">微信</a>
+        </div>
+        <div>
+            <a href="" class="circle c1"><img src="images/w_3.png" alt=""></a>
+            <a href="">QQ</a>
+        </div>
+        <div>
+            <a href="" class="circle c1"><img src="images/w_4.png" alt=""></a>
+            <a href="">百度贴吧</a>
+        </div>
+    </div>
+
+    <p>注册即表示同意<a href="">《婚礼纪用户使用协议》</a></p>
+</body>
+<script>
+    var tel_patt = /^1[34578]\d{9}$/; //手机格式
+    var pw_patt = /^(?!([a-zA-Z]+|\d+)$)[a-zA-Z\d]{6,12}$/; //密码格式
+
+    var telRes, pwRes;
+    //手机验证
+    $("#user").blur(function () {
+        telRes = tel_patt.test($(this).val());
+        if (!telRes) {
+            $(this).parent().css("borderBottom", "1px solid red");
+            $(this).css("color", "red");
+
+            if ($(this).val()) {
+
+                $('.err_tip').html('手机号格式错误');
+
+            } else {
+
+                $('.err_tip').html('手机号不能为空');
+
+            }
+        }
+    }).focus(function () {
+        $(this).parent().css("borderBottom", "1px solid #dedfe0");
+        $(this).css("color", "black");
+        $('.err_tip').html('');
+    })
+
+    // 密码验证
+    $("#password").blur(function () {
+        pwRes = pw_patt.test($(this).val());
+        if (!pwRes) {
+            $(this).parent().css("borderBottom", "1px solid red");
+            $(this).css("color", "red");
+
+            if ($(this).val()) {
+
+                $('.err_tip').html('密码须包含数字、英文6~12位字符');
+
+            } else {
+
+                $('.err_tip').html('密码不能为空');
+
+            }
+        }
+    }).focus(function () {
+        $(this).parent().css("borderBottom", "1px solid #dedfe0");
+        $(this).css("color", "black");
+        $('.err_tip').html('');
+    })
+
+    // 删除
+    $("#del").click(function () {
+        $("#user").val("");
+        $("#user").parent().css("borderBottom", "1px solid #dedfe0");
+        $('.err_tip').html('');
+
+    })
+
+    // 登录
+    $("#login").click(function () {
+        if (telRes && pwRes) {
+            $(this).css("backgroundColor", "#ff5c5c");
+            location.herf = "shouye.html"
+        }
+    })
+</script>
+
+</html>

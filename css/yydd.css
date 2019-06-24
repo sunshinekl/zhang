@@ -1,0 +1,51 @@
+@import url(common.css);
+#content {
+  position: absolute;
+  top: 0.86rem;
+  bottom: 1rem;
+  left: 0;
+  width: 100%;
+  background: #f3f3f3; }
+  #content .info {
+    height: 0.8rem;
+    background: #fff;
+    margin: 0.2rem 0;
+    padding: 0 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.34rem;
+    color: #333; }
+    #content .info input {
+      width: 4rem;
+      height: 0.7rem;
+      text-align: right;
+      border: none;
+      font-size: 0.32rem;
+      color: #333; }
+  #content .con {
+    height: 1.44rem;
+    background: #fff;
+    font-size: 0.32rem;
+    padding: 0.2rem; }
+    #content .con p {
+      height: 0.52rem;
+      line-height: 0.52rem; }
+      #content .con p:nth-child(1) {
+        color: #8e8e8e; }
+      #content .con p:nth-child(2) {
+        color: #333; }
+        #content .con p:nth-child(2) span {
+          color: #ff5c5c;
+          padding: 0.02rem 0.2rem;
+          border: 1px solid #ff5c5c;
+          border-radius: 8px;
+          margin-right: 0.1rem; }
+
+#footer {
+  background: #ff5c5c;
+  text-align: center;
+  line-height: 1rem;
+  display: block;
+  font-size: 0.36rem;
+  color: #fff; }

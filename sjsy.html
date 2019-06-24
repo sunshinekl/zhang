@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>商家主页</title>
+    <script src="js/autoRem.js"></script>
+    <link rel="stylesheet" href="css/head_foot.css">
+    <link rel="stylesheet" href="css/sjzy.css">
+
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_left" id="back"><img src="images/back.png" alt=""></div>
+        <div class="head_center"><span class="head_title">商家主页</span></div>
+        <div class="head_right"><img src="images/fenxiang.png" alt=""></div>
+    </div>
+    <!-- 内容 -->
+    <div id="content">
+        <div id="box">
+            <div class="care">
+                <img src="images/shangjia01.jpg" alt="">
+                <ul>
+                    <li>美心婚礼</li>
+                    <li>婚礼策划&nbsp;粉丝5</li>
+                    <li>河南首家婚礼策划机构</li>
+                    <li>+关注</li>
+                </ul>
+            </div>
+            <ul class="info">
+                <li class="list1">
+                    <span>免</span>
+                    <span>● 在线支付抽免单</span>
+                </li>
+                <li class="list2">
+                    <span>到店礼</span>
+                    <span>预约即可领取</span>
+                    <a href="javascript:;">梦妆高级化妆护肤品一套</a>
+                </li>
+                <li>
+                    店址:郑州金水区金水路99号建达大厦409
+                </li>
+            </ul>
+
+            <div class="tc1">
+                <h3 class="tc_type">套餐 (1)</h3>
+                <div class="tc1_bo">
+                    <img src="images/shangjia02.jpg" alt="">
+                    <div>
+                        <p>《悦.心》系列</p>
+                        <p><span>￥3988</span><del>8888</del><span>收藏 5</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tc2">
+                <h3 class="tc_type">套餐 (1)</h3>
+                <ul class="tc_info">
+                    <li>
+                        <img src="images/shangjia03.jpg" alt="">
+                        <div>
+                            <span>《Sunshine》</span>
+                            <span class="star"><img src="images/star.png" alt="">&nbsp;4</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/shangjia04.jpg" alt="">
+                        <div>
+                            <span>《王的遇见》</span>
+                            <span class="star"><img src="images/star.png" alt="">&nbsp;10</span>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/shangjia05.jpg" alt="">
+                        <div>
+                            <span>爱之奇迹-中国红-喜庆</span>
+                            <span class="star"><img src="images/star.png" alt="">&nbsp;8</span>
+                        </div>
+                    </li>
+                </ul>
+                <p class="more">查看全部></p>
+            </div>
+            <ul class="daily">
+                <li>
+                    <div class="time1">
+                        <span class="day">20</span>
+                        <span class="month">4月</span>
+                    </div>
+                    <div class="time2">
+                        <span class="day_time">11:20</span>
+                        <p>陪伴应该是最长的告白</p>
+                    </div>
+                </li>
+                <li>
+                    <img src="images/shangjia06.jpg" alt="">
+                    <img src="images/shangjia07.jpg" alt="">
+                    <img src="images/shangjia08.jpg" alt="">
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <!-- 分享 -->
+    <ul class="share">
+        <ul>
+            <li class="share_to">
+                <a href="javascript:;">
+                    <img src="images/share01.png" alt="">
+                    <span>朋友圈</span>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/share02.png" alt="">
+                    <span>微信好友</span>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/share03.png" alt="">
+                    <span>新浪微博</span>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/share04.png" alt="">
+                    <span>QQ</span>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/share05.png" alt="">
+                    <span>QQ空间</span>
+                </a>
+                <a href="javascript:;">
+                    <img src="images/share06.png" alt="">
+                    <span>腾讯微博</span>
+                </a>
+            </li>
+            <li class="cancel">取消</li>
+        </ul>
+    </ul>
+    <!--底部  -->
+    <div id="footer">
+        <a href="">
+            <img src="images/call.png" alt="">
+            <span>电话咨询</span>
+        </a>
+        <a href="">
+            <img src="images/sixin.png" alt="">
+            <span>短信咨询</span>
+        </a>
+        <div class="call">预约到店</div>
+    </div>
+</body>
+<script src="js/iscroll.Veb.js"></script>
+<script src="js/zepto.min.js"></script>
+<script>
+    var isc = new iScroll("content", {
+        vScrollbar: false
+    });
+
+    // 分享
+
+    $('.head_right')[0].ontouchend = function () {
+        $('.share').show();
+    }
+
+    $('.cancel')[0].ontouchend = function () {
+        $('.share').hide();
+    }
+    //预约到店
+    $('.call')[0].ontouchend = function(){
+        location.href = 'yydd.html';
+    }
+    //上一页
+    $('#back').click(function(){
+        window.history.back();
+    })
+</script>
+
+</html>

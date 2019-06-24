@@ -1,0 +1,107 @@
+@import url(common.css);
+#content {
+  position: absolute;
+  width: 100%;
+  top: 0.86rem;
+  bottom: 1rem;
+  left: 0;
+  background: #f3f3f3; }
+  #content .name {
+    width: 100%;
+    background: #fff; }
+    #content .name .name_con {
+      width: 100%;
+      height: 1.46rem;
+      padding: 0.2rem;
+      border-top: 1px solid #dedede;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+      #content .name .name_con .name_left {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        #content .name .name_con .name_left img {
+          border-radius: 50%;
+          width: 1rem;
+          height: 1rem; }
+        #content .name .name_con .name_left div {
+          font-size: 0; }
+        #content .name .name_con .name_left span {
+          font-size: 0.4rem;
+          color: #333; }
+        #content .name .name_con .name_left p {
+          font-size: 0.3rem;
+          color: #7a7a7a;
+          width: auto; }
+    #content .name .name_list {
+      width: 100%;
+      height: 1.35rem;
+      border-top: 1px solid #dedede;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 0.6rem; }
+      #content .name .name_list a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 30%;
+        height: 100%;
+        flex-wrap: wrap;
+        justify-content: space-around; }
+        #content .name .name_list a img {
+          width: 0.6rem;
+          height: 0.6rem; }
+        #content .name .name_list a p {
+          font-size: 0.3rem;
+          color: #333;
+          width: 100%;
+          text-align: center; }
+  #content .name_right {
+    /*  width: 0.19rem; */
+    height: 0.33rem; }
+  #content .myList {
+    width: 100%;
+    margin-top: 0.2rem; }
+    #content .myList li {
+      width: 100%;
+      background: #fff;
+      margin-bottom: 0.1rem; }
+      #content .myList li a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 0.96rem;
+        padding: 0 0.2rem; }
+        #content .myList li a div {
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+        #content .myList li a .item_log {
+          width: 0.54rem;
+          height: 0.54rem; }
+        #content .myList li a .item_title {
+          font-size: 0.36rem;
+          color: #333;
+          margin-left: 0.2rem; }
+        #content .myList li a .item_rig {
+          font-size: 0.32rem;
+          color: #666;
+          margin-right: 0.2rem; }
+        #content .myList li a .qiandao {
+          display: inline-block;
+          width: 2rem;
+          border-radius: 0.3rem;
+          text-align: center;
+          border: 1px solid #ff5c5c;
+          font-size: 0.36rem;
+          color: #ff5c5c; }
+      #content .myList li .item_top {
+        border-bottom: 1px solid #dedede; }
+
+#footer a:nth-child(5) span {
+  color: #ff5c5c; }

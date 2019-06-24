@@ -1,0 +1,157 @@
+@import "common.css";
+$color:#ff5c5c;
+@mixin font($size,$col) {
+    font-size: #{$size}rem;
+    color: $col;
+}
+//头部
+#head{
+    background: transparent;
+    .head_right{
+        img{
+            margin-left: 0.3rem;
+        }
+    }
+}
+//内容
+#content{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 1rem;
+    left: 0;
+    z-index: -1;
+}
+#box{
+    background: #f3f3f3;
+}
+.top{
+    font-size: 0;
+    background: #fff;
+    img{
+        width: 100%;
+    }
+    p{
+        padding: 0.2rem;
+        text-align: center;
+        @include font(0.34,#333 );
+    }
+    .money{
+        font-size: 0.32rem;
+        text-align: center;
+        span{
+            color: $color;
+            margin-right: 0.1rem;
+        }
+        del{
+            color: #8e8e8e;
+        }
+    }
+    .you{
+        padding: 0.2rem;
+        border-top: 1px solid #dedede;
+        margin-top: 0.2rem;
+        text-align: center;
+        @include font(0.3,#666);
+        img{
+            width: 0.24rem;
+            margin-right: 0.05rem;
+        }
+        span{
+            margin-right: 0.2rem;
+        }
+    }
+    
+}
+
+.list{
+    li{
+        height: 0.9rem;
+        background: #fff;
+        margin-top: 0.2rem;
+        padding:0 0.2rem;
+        font-size: 0;
+        img{
+            width: 0.7rem;
+        }
+    }
+    .item1{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div{
+            width: 4.3rem;
+            p{
+                @include font(0.32,#333 );
+            }
+            span{
+                @include font(0.3,#ccc );
+            }
+        }
+        .item1_right{
+            text-align: center;
+            width: 1.6rem;
+            @include font(0.32,#fff );
+            background: #f39f28;
+            padding: 0.1rem;
+            border-radius: 0.2rem;
+        }
+    }
+    .item2{
+        span{
+            @include font(0.32,#333 );
+            margin-right: 0.1rem;
+        }
+    }
+    .item3{
+        height: 1.4rem;
+        p{
+            @include font(0.32,#333 );
+            margin: 0.1rem 0;
+        }
+       img{
+           margin-right: 0.2rem;
+       }
+    }
+}
+.more{
+    font-size: 0;
+    margin-top: 0.2rem;
+    display: none;
+    img{
+        width: 100%;
+    }
+}
+.loadMore{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    text-align: center;
+    @include font(0.3,#333);
+}
+// 底部
+#footer{
+    padding: 0 0.2rem;
+    font-size:0.36rem;
+    color: #fff; 
+    .zixun{
+        width: 3rem;
+        display: flex;
+        align-items: center;
+        color: #333;
+        img{
+            width: 0.54rem;
+            margin-right: 0.2rem;
+        }
+
+    }
+    .add{
+        background: #f39f28;
+        padding: 0.1rem;
+        border-radius: 0.2rem;
+    }
+    .buy{
+        background:$color;
+        padding: 0.1rem;
+        border-radius: 0.2rem;
+    }
+}

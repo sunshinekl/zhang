@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>启动引导页</title>
+    <script src="js/autoRem.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script src="js/iscroll.Veb.js"></script>
+    <link rel="stylesheet" href="css/lead.css">
+</head>
+
+<body>
+    <div id="start">
+        <img src="images/qidong.png" alt="">
+    </div>
+    <div id="lead">
+        
+        <div id="lead_con">
+            <ul class="lead_list">
+                <li>
+                    <img src="images/lead02.jpg" alt="">
+                    <p class="title">2万靠谱婚礼商家任你选购</p>
+                </li>
+                <li>
+                    <img src="images/lead04.jpg" alt="">
+                    <p class="title">海量精美电子请帖免费使用</p>
+                </li>
+                <li>
+                    <img src="images/lead06.jpg" alt="">
+                    <p class="title">百万新娘备婚经验供你参考</p>
+                </li>
+            </ul>
+        </div>
+        <ul class="list">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <div class="login">
+            <a href="login.html" class="log">登录</a>
+            <a href="register.html" class="reg">注册</a>
+        </div>
+    </div>
+</body>
+<script>
+    $(window).ready(function () {
+        setTimeout(function () {
+            $('#start').css({
+                opacity: 0,
+                zIndex: -1
+            });
+        }, 1000);
+        setTimeout(function () {
+            $('#lead').css({
+                opacity: 1
+            });
+        }, 2200);
+    });
+
+    var isc = new iScroll("lead_con",{
+        hScrollbar:false,
+        snap:true,
+        momentum:false,
+        bounce:false,
+        onScrollEnd:function(){
+            $('.list li').eq(this.currPageX).addClass('on').siblings().removeClass('on')
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/head_foot.css"> -->
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/iscroll.Veb.js"></script>
+    <script src="js/autoRem.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #dedfe0;
+    }
+
+    #head {
+        height: 0.86rem;
+        width: 100%;
+        padding: 0.1rem 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #head div {
+        text-align: center;
+        font-size: 0;
+    }
+
+    #head div img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+    }
+
+    #head .head_title {
+        font-size: 0.4rem;
+        color: #ff5c5c;
+    }
+
+    #head .head_right img {
+        margin-left: 0.2rem;
+    }
+
+    #outside {
+        height: 0.86rem;
+        width: 100%;
+    }
+
+    .head-pic {
+        width: 100%;
+        height: 5.75rem;
+        background-color: #fff;
+        background-image: url(images/yx-4.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .con-detail {
+        width: 100%;
+        background: #fff;
+        font-size: 0.33rem;
+        padding: 0.2rem;
+    }
+
+    .con-detail p {
+        text-align: center;
+    }
+
+    .con-detail p:nth-child(1) {
+        color: #333333;
+    }
+
+    .con-detail p:nth-child(2) {
+        margin-top: 0.2rem;
+        border-bottom: 1px solid #dedfe0;
+    }
+
+    .con-img {
+        width: 100%;
+        color: #666;
+        font-size: 0.25rem;
+        height: 0.55rem;
+        padding: 0.15rem 0;
+    }
+
+    .con-img img {
+        width: 0.25rem;
+        vertical-align: middle;
+    }
+
+    .con-detail .price-now {
+        color: #ff5c5c;
+    }
+
+    .con-detail .price-pass {
+        color: #aeaeae;
+        margin-left: 0.1rem;
+        text-decoration-line: line-through;
+    }
+
+    .shop {
+        width: 100%;
+        height: 0.88rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .shop a {
+        display: block;
+    }
+
+    .sh-1 img {
+        width: 0.71rem;
+        height: 0.71rem;
+    }
+
+    .sh-des {
+        display: inline-block;
+    }
+
+    .sh-des p:nth-child(1) {
+        color: #333;
+        font-size: 0.30rem;
+    }
+
+    .sh-des p:nth-child(2) {
+        color: #aeaeae;
+        font-size: 0.21rem;
+    }
+
+    .sh-2 {
+        color: #fef4ec;
+        font-size: 0.25rem;
+        background: #f39f28;
+        text-align: center;
+        width: 1.39rem;
+        height: 0.41rem;
+        line-height: 0.41rem;
+        border-radius: 0.2rem;
+    }
+
+    .word {
+        width: 100%;
+        height: 0.88rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        font-size: 0.26rem;
+        color: #333;
+    }
+
+    .people {
+        width: 100%;
+        height: 1.42rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        font-size: 0.26rem;
+        color: #333;
+    }
+
+    .people img {
+        width: 0.66rem;
+        height: 0.66rem;
+        border-radius: 50%;
+    }
+
+    .go-on {
+        width: 100%;
+        height: 0.5rem;
+        line-height: 0.5rem;
+        font-size: 0.25rem;
+        text-align: center;
+        color: #666;
+    }
+
+    #out {
+        width: 100%;
+        height: 1rem;
+    }
+
+    .foot-b {
+        width: 100%;
+        height: 1rem;
+        padding: 0.2rem 0.18rem;
+        background: #fff;
+        font-size: 0.25rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+    }
+
+    .message {
+        width: 0.58rem;
+        vertical-align: middle
+    }
+
+    .connect {
+        color: #333;
+        font-size: 0.29rem;
+    }
+
+    .sh-car {
+        width: 1.41rem;
+        height: 0.47rem;
+        padding: 0.1rem;
+        background: #f39f28;
+        color: #843f07;
+        border-radius: 0.2rem;
+    }
+
+    .sh-buy {
+        width: 1.41rem;
+        height: 0.47rem;
+        padding: 0.1rem;
+        background: #ff5c5c;
+        color: #fff;
+        border-radius: 0.2rem;
+
+    }
+</style>
+
+<body>
+    
+
+    <!-- 内容区 -->
+    <div id="content">
+        <div>
+            <div class="head-pic">
+                <div id="outside">
+                    <div id="head">
+                        <div class="head_left"><img src="images/back.png" alt=""></div>
+                        <div class="head_right">
+                            <img src="images/yx-1.png" alt="">
+                            <img src="images/yx-2.png" alt="">
+                            <img src="images/yx-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con-detail">
+                <p>2016春夏季新款简约修肩显瘦A字摆婚纱礼服蕾丝包肩新娘婚纱</p>
+                <p><span class="price-now">￥388.00</span><span class="price-pass">￥888.00</span></p>
+                <p class="con-img">
+                    <img src="images/yx-5.png" alt="">全国包邮&#x3000;
+                    <img src="images/yx-5.png" alt="">支持退货
+                </p>
+
+            </div>
+            <div class="shop">
+                <a href="###" class="sh-1">
+                    <img src="images/yx-6.png" alt="">
+                    <div class="sh-des">
+                        <p>贞衣爱旗舰店</p>
+                        <p>关注135</p>
+                    </div>
+                </a>
+                <a href="###" class="sh-2">进店逛逛</a>
+            </div>
+            <div class="word">双肩钻饰绑带婚纱 复古宫廷 纯手工缝钻 奢华一字肩 镂空蕾丝包肩 韩版公主范</div>
+            <div class="people">
+                <p>他们都已收藏（61）</p>
+                <p>
+                    <img src="images/yx-7.png" alt="">
+                    <img src="images/yx-8.png" alt="">
+                    <img src="images/yx-9.png" alt="">
+                    <img src="images/yx-10.png" alt="">
+                    <img src="images/yx-11.png" alt="">
+                    <img src="images/yx-12.png" alt="">
+                </p>
+            </div>
+            <div class="go-on">继续拖动查看图文详情</div>
+
+        </div>
+    </div>
+    <div id="out">
+        <div class="foot-b">
+            <div>
+                <img class="message" src="images/yx-13.png" alt="">
+                <span class="connect">联系卖家</span>
+            </div>
+            <div>
+                <a href="###" class="sh-car">加入购物车</a>
+                <a href="###" class="sh-buy">立即购买</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    new iScroll('content')
+
+</script>
+
+</html>

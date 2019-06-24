@@ -1,0 +1,85 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$color:#ff5c5c;
+@mixin font($size,$col) {
+    font-size: #{$size}rem;
+    color: $col;
+}
+// 头部
+#head{
+    height: 0.86rem;
+    width: 100%;
+    background: #fff;
+    padding: 0.1rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div{
+        text-align: center;
+        font-size: 0;
+        img{
+            width: 0.4rem;
+            height: 0.4rem;
+            vertical-align: middle;
+        }
+    }
+    .head_title{
+        @include font(0.4,$color);
+    }
+    
+}
+
+// 底部
+#footer{
+    height: 1rem;
+    width: 100%;
+    border-top: 1px solid #dedede;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+        display: block;
+        width: 18%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        img{
+            width: 0.54rem;
+            height: 0.54rem;
+        }
+        span{
+            display: block;
+            width: 100%;
+           @include  font(0.3,#8e8e8e);
+            text-align: center;
+        }
+    }
+}

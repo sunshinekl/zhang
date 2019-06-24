@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>婚纱礼服</title>
+    <script src="js/autoRem.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        #head {
+            height: 0.86rem;
+            width: 100%;
+            background: #fff;
+            padding: 0.1rem 0.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #head div {
+            text-align: center;
+            font-size: 0;
+        }
+
+        #head div img {
+            width: 0.4rem;
+            height: 0.4rem;
+            vertical-align: middle;
+        }
+
+        #head .head_title {
+            font-size: 0.4rem;
+            color: #ff5c5c;
+        }
+
+        hr {
+            height: 0;
+            border: 0.01rem solid #dedfe0;
+        }
+
+        #main {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        #main>div {
+            width: 3.6rem;
+            height: 4.1rem;
+            margin-top: 0.2rem;
+        }
+
+        .pic img {
+            width: 3.6rem;
+            height: 3rem;
+        }
+
+        .detail {
+            font-size: 0.25rem;
+            color: #666666;
+        }
+
+        .price {
+            font-size: 0.25rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .price a {
+            color: #ff5c5c;
+        }
+
+        .price .star {
+            color: #8e8e8e;
+        }
+
+        .price img {
+            width: 0.25rem;
+            height: 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_left" id="back"><img src="images/back.png" alt=""></div>
+        <div class="head_center"><span class="head_title">婚纱礼服</span></div>
+        <div class="head_right"><img src="images/shopping.png" alt=""></div>
+    </div>
+    <hr>
+
+    <div id="main">
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_6.png" alt=""></a>
+            <p class="detail">【送头纱手套】&nbsp;婚纱新款上市...</p>
+            <p class="price">
+                <a href="">￥488.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">1397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_9.png" alt=""></a>
+            <p class="detail">【送头纱手套裙撑】&nbsp;春夏新款...</p>
+            <p class="price">
+                <a href="">￥388.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">1087</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_7.png" alt=""></a>
+            <p class="detail">斜肩拖尾伴娘装婚纱...</p>
+            <p class="price">
+                <a href="">￥288.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">1397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_8.png" alt=""></a>
+            <p class="detail">2018新款抹胸白色韩式礼服</p>
+            <p class="price">
+                <a href="">￥378.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">2397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_12.png" alt=""></a>
+            <p class="detail">清新浪漫公主婚纱白色蕾丝...</p>
+            <p class="price">
+                <a href="">￥388.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">1397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_10.png" alt=""></a>
+            <p class="detail">2018新款抹胸白色欧美礼服</p>
+            <p class="price">
+                <a href="">￥368.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">2397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_13.png" alt=""></a>
+            <p class="detail">甜美蕾丝抹胸新娘婚纱...</p>
+            <p class="price">
+                <a href="">￥488.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">1397</a>
+            </p>
+        </div>
+        <div>
+            <a href="xqy.html" class="pic"><img src="images/w_11.png" alt=""></a>
+            <p class="detail">新款抹胸欧美范欧森系婚纱</p>
+            <p class="price">
+                <a href="">￥378.00</a>
+                <a href="" class="star"><img src="images/w_5.png" alt="">2397</a>
+            </p>
+        </div>
+    </div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script>
+ // 上一页
+
+ $('#back')[0].ontouchend = function () {
+
+        window.history.back();
+    }
+</script>
+</html>

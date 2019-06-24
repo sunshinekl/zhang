@@ -1,0 +1,64 @@
+@import "common.css";
+$color:#ff5c5c;
+@mixin font($size,$col) {
+    font-size: #{$size}rem;
+    color: $col;
+}
+
+#content{
+    position: absolute;
+    top: 0.86rem;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+    background: #f3f3f3;
+    
+    .info{
+        height: 0.8rem;
+        background:#fff;
+        margin: 0.2rem 0;
+        padding: 0 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include font(0.34,#333);
+        input{
+            width: 4rem;
+            height: 0.7rem;
+            text-align: right;
+            border: none;
+            @include font(0.32,#333);
+        } 
+    }
+    .con{
+        height: 1.44rem;
+        background: #fff;
+        font-size: 0.32rem;
+        padding:0.2rem;     
+        p{
+          height: 0.52rem;
+            line-height: 0.52rem;
+            &:nth-child(1){
+                color: #8e8e8e;
+            }
+            &:nth-child(2){
+                color: #333;
+                span{
+                    color: $color;
+                    padding:0.02rem 0.2rem;
+                    border: 1px solid $color;
+                    border-radius: 8px;
+                    margin-right: 0.1rem; 
+                }
+            }
+        }
+    }
+}
+// 底部
+#footer{
+    background: $color;
+    text-align: center;
+    line-height: 1rem;
+    display: block;
+    @include font(0.36,#fff);
+}

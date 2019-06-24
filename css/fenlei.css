@@ -1,0 +1,81 @@
+@import url(common.css);
+#head {
+  border-bottom: 1px solid #dedede; }
+  #head .head_left {
+    height: 100%;
+    position: relative; }
+    #head .head_left input {
+      height: 100%;
+      width: 5.82rem;
+      border: none;
+      background: #f3f3f3;
+      border-radius: 0.4rem;
+      padding-left: 0.8rem;
+      font-size: 0.3rem; }
+    #head .head_left img {
+      position: absolute;
+      width: 0.4rem;
+      height: 0.4rem;
+      left: 0.4rem;
+      top: 50%;
+      margin-top: -0.2rem; }
+
+#content {
+  position: absolute;
+  top: 0.86rem;
+  bottom: 1rem;
+  left: 0;
+  width: 100%; }
+
+#box {
+  background: #f3f3f3; }
+  #box .box_title {
+    font-size: 0.36rem;
+    color: #333;
+    padding: 0.3rem 0.16rem 0.1rem;
+    font-weight: normal; }
+  #box .com {
+    background: #fff; }
+    #box .com div {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 0 0.35rem 0.2rem;
+      height: 5.6rem; }
+      #box .com div a {
+        display: block;
+        width: 1.7rem;
+        font-size: 0;
+        text-align: center; }
+        #box .com div a img {
+          width: 1rem; }
+        #box .com div a span {
+          margin-top: 0.1rem;
+          display: block;
+          font-size: 0.3rem;
+          color: #333; }
+  #box .caigou {
+    margin-top: 0.12rem; }
+    #box .caigou div {
+      height: 3.3rem; }
+      #box .caigou div img {
+        width: 0.7rem;
+        height: 0.85rem; }
+  #box .hot {
+    margin-top: 0.12rem;
+    background: #fff; }
+    #box .hot table {
+      margin-top: 0.2rem;
+      border-collapse: collapse; }
+      #box .hot table tr {
+        height: 0.6rem; }
+        #box .hot table tr td {
+          border: 1px solid #dedede;
+          border-left: none;
+          width: 2.5rem;
+          text-align: center;
+          font-size: 0.32rem;
+          color: #333; }
+
+#footer a:nth-child(2) span {
+  color: #ff5c5c; }

@@ -1,0 +1,380 @@
+@import url(common.css);
+#header{
+    width: 100%;
+    height:0.86rem ;
+    padding:0.1rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f3f3f3;
+}
+#header .place{
+    width: 1rem;
+    color: #ff5c5c;
+    font-size: 0.3rem;
+    height: 0.65rem;
+    line-height: 0.65rem;
+    text-align: center;
+}
+#header .place img{
+    width: 0.15rem;
+    height: 0.15rem;
+}
+#header .search{
+    width: 4.7rem;
+    position: relative;
+    height: 0.65rem;
+    color:#bbb;
+}
+#header .search input{
+    width: 4.7rem;
+    height: 0.65rem;
+    border-radius:0.4rem;
+    border: none;
+    background: #f3f3f3;
+    padding-left: 0.7rem;
+    position: absolute;
+    outline: none;
+    font-size: 0.3rem;
+}
+#header .search i{
+    position: absolute;
+    font-size: 0.4rem;
+    z-index: 2;
+    top: 50%;
+    margin-top: -0.2rem;
+    left: 0.2rem;
+}
+#header>img{
+    width: 0.45rem;
+    height: 0.45rem;
+}
+
+/* 内容区 */
+#content{
+    position: absolute;
+    left: 0;
+    top: 0.86rem;
+    bottom: 1rem;
+    width: 100%;
+}
+/* nav */
+#nav{
+    width: 100%;
+    background: #fff;
+    padding-top: 0.1rem;
+}
+/* 轮播图 */
+#banner{
+    height: 3rem;
+    position: relative;
+}
+.view img{
+    width: 7.5rem;
+    height: 3rem;
+    float: left;
+}
+.view{
+    width: 45rem;
+    overflow: hidden;
+}
+.ban_list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1.4rem;
+    position: absolute;
+    left: 50%;
+    margin-left: -0.7rem;
+    bottom: 0.2rem;
+}
+.ban_list li{
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 50%;
+    background: #fff;
+}
+.ban_list .on{
+    background: #666;
+}
+.nav_list{
+    width: 100%;
+    height: 1.6rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.nav_list li{
+    width: 20%;
+    height: 1.6rem;
+}
+.nav_list li a{
+    display: block;
+    color: #333;
+    font-size:0.3rem;
+    height: 1.6rem; 
+    text-align: center;
+}
+.nav_list li img{
+    width: 1rem;
+    height: 1rem;
+    margin-top: 0.05rem;
+}
+.nav_list li span{
+    display: inline-block;
+    height: 0.5rem;
+}
+/* 内容 */
+.con1{
+    width: 100%;
+    margin-top:0.2rem;
+    background: #fff;
+   
+    overflow: hidden;
+}
+.con1 li{
+    float: left;
+    width: 50%;
+    height: 2.87rem;
+    padding: 0 0.05rem;
+}
+.con1 .con1_right{
+    border-left:1px solid #d6d4d4;
+    
+}
+.con1 .con1_p1{
+    color: #ff5c5c;
+    font-size: 0.4rem;
+    margin-top: 0.2rem;
+}
+.con1 .con1_p2{
+    color: #8e8e8e;
+    font-size: 0.25rem;
+    margin-top: 0.1rem;
+}
+.con1 .con1_im1{
+    width: 1.92rem;
+    height: 1.33rem;
+}
+.con1 .con1_im2{
+    width: 1.28rem;
+    height: 1.66rem;         
+}
+.con1_right .right_top{
+    height: 50%;
+    border-bottom:1px solid #d6d4d4;
+}
+.con1_right .right_top img{
+    width: 1.22rem;
+    height: 0.82rem;
+    float: left;
+    margin-top: 0.2rem;
+    
+}
+.con1_right .p1{
+   font-size: 0.4rem;
+   padding-top: 0.2rem;
+}
+.con1_right .p2{
+   font-size: 0.25rem;
+   color: #8e8e8e;
+   padding-top: 0.1rem;
+}
+.con1_right .right_bo img{
+    width: 1.37rem;
+    height: 1.22rem;
+    float: left;
+    margin-top: 0.1rem;
+    margin-right: 0.05rem;
+}
+.right_top .p1{
+    color: #f06d1e;
+}
+.right_bo .p1{
+    color: #169bd5;
+}
+
+.con2{
+    width: 100%;
+    height: 2.6rem;
+    padding: 0.2rem;
+    margin-top: 0.2rem;
+    background: #fff;
+}
+.con2 img{
+    width: 100%;
+    height: 2.2rem;
+}
+
+.info{
+    width: 100%;
+    height: auto;
+    background: #fff;
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+}
+.info_name{
+   
+    line-height: 0.6rem;
+    
+}
+.info_name img{
+    width: 0.6rem;
+    height: 0.6rem;
+}
+.info_name *{
+    display: inline-block;
+    vertical-align: middle;
+}
+.info_name .sp1{
+    font-size: 0.35rem;
+   /*  margin-left: -0.1rem; */
+}
+.info_name .sp2{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0 0.1rem;
+    font-size: 0.25rem;
+    background: #ff5c5c;
+    color: #fff;
+    border-radius: 0.3rem;
+}
+.info_name .sp3{
+    height: 0.5rem;
+    line-height: 0.5rem;
+    float: right;
+    margin-top: 0.15rem;
+    font-size: 0.25rem;
+    border: 1px solid #ff5c5c;
+    color: #ff5c5c;
+    border-radius: 0.1rem;
+    padding: 0 0.05rem;
+}
+.intro{
+    color: #666;
+    margin: 0.1rem 0;
+    font-size: 0.3rem;
+}
+
+.info_img img{
+    width: 100%;
+}
+.price{
+    width: 50%;
+   
+    margin: 0.1rem 0 0.1rem 50%;
+    height: 0.5rem;       
+    background: #ff5c5c;
+    font-size: 0.3rem;
+    border-radius: 0.05rem;
+    
+}
+.price div{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.price span:nth-child(1){
+    background: #fff;
+    margin-left: 0.1rem;
+    border-radius: 0.05rem;
+    color: #ff5c5c;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 2.2rem;
+}
+.price span:nth-child(1) del{
+    color: #ccc;
+    font-size:0.25rem;
+    margin-right: 0.05rem; 
+}
+.price span:nth-child(2){
+    margin-right: 0.1rem;
+    color: #fff;
+}
+.line{
+    height: 1px;
+    background: #dedede;
+}
+.info_bo{
+    font-size: 0.3rem;
+    margin-top: 0.1rem;
+              
+}
+.info_bo * {
+    vertical-align: middle;
+}
+.info_bo img{
+    width: 0.32rem;
+}
+.info_bo span{
+    line-height: 0.4rem;
+}
+.info_bo span:nth-of-type(1){
+    color: #ff5c5c;
+}
+.info_bo span:nth-of-type(2){
+    float: right;
+    color: #8e8e8e;
+}
+#count{
+    text-align: right;
+    
+}
+#count span{
+    color: #8e8e8e;
+}
+#four_img {
+   
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#four_img img{
+    width: 49%;
+    height: 1.85rem;
+    margin-bottom: 0.2rem;
+}
+#two_img img{
+    width: 49%;
+    height: 1.85rem;           
+}
+#two_img{
+    display: flex;
+    justify-content: space-between;
+}
+.load{
+    width: 100%;
+    height: 1rem;
+    background: #f3f3f3;
+    line-height: 1rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #666;
+}
+
+#footer a:nth-child(1) span{
+    color: #ff5c5c;
+}
+#back{
+    width: 0.6rem;
+    height: 0.6rem;
+    position: fixed;
+    right: 0.3rem;
+    bottom: 1.25rem;
+    cursor: pointer;
+    display: none;
+}
+#back span{
+    display: block;
+    height: 100%;
+    line-height: 0.6rem;
+    font-size: 0.4rem;
+    background: #ff5c5c;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+}

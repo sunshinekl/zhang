@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="css/head_foot.css"> -->
+    <link rel="stylesheet" href="css/common.css">
+    <script src="js/iscroll.Veb.js"></script>
+    <script src="js/autoRem.js"></script>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #dedfe0;
+    }
+
+    #head {
+        height: 0.86rem;
+        width: 100%;
+        padding: 0.1rem 0.2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #head div {
+        text-align: center;
+        font-size: 0;
+    }
+
+    #head div img {
+        width: 0.4rem;
+        height: 0.4rem;
+        vertical-align: middle;
+    }
+
+    #head .head_title {
+        font-size: 0.4rem;
+        color: #ff5c5c;
+    }
+
+    #head .head_right img {
+        margin-left: 0.1rem;
+    }
+
+    #outside {
+        height: 0.86rem;
+        width: 100%;
+    }
+
+    .head-pic {
+        width: 100%;
+        height: 5.75rem;
+        background-color: #fff;
+        background-image: url(images/yx-21.png);
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    #content{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+    .con-detail {
+        width: 100%;
+        background: #fff;
+        font-size: 0.33rem;
+        padding: 0.2rem;
+        text-align: center;
+    }
+
+    .con-detail #plan {
+        color: #ff5c5c;
+        display: inline-block;
+        height: 0.3rem;
+        line-height: 0.3rem;
+        font-size: 0.25rem;
+        border-radius: 0.08rem;
+        width: 1.2rem;
+        border: 1px solid #ff5c5c;
+
+    }
+
+
+    .con-detail p:nth-child(1) {
+        color: #333333;
+    }
+
+    .con-detail p:nth-child(2) {
+        margin-top: 0.2rem;
+        border-bottom: 1px solid #dedfe0;
+    }
+
+    .con-img {
+        width: 100%;
+        color: #666;
+        font-size: 0.25rem;
+        height: 0.55rem;
+        padding: 0.15rem 0;
+        text-align: left;
+    }
+
+    .con-img #order {
+        background: #ff5c5c;
+        display: inline-block;
+        width: 0.3rem;
+        height: 0.3rem;
+        color: #fff;
+        font-size: 0.25rem;
+        line-height: 0.3rem;
+        text-align: center;
+    }
+
+    .con-detail .price-now {
+        color: #ff5c5c;
+        font-weight: bolder;
+    }
+
+    .con-detail .price-pass {
+        color: #aeaeae;
+        margin-left: 0.1rem;
+        text-decoration-line: line-through;
+    }
+
+    .shop {
+        width: 100%;
+        height: 1.5rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    .shop a {
+        display: block;
+    }
+
+    .shop img {
+        width: 0.8rem;
+        vertical-align: middle;
+    }
+
+    .sh-des p:nth-child(1) {
+        color: #333;
+        font-size: 0.30rem;
+    }
+
+    .sh-des p:nth-child(2) {
+        color: #aeaeae;
+        font-size: 0.21rem;
+    }
+
+    .sh-2 {
+        color: #fef4ec;
+        font-size: 0.25rem;
+        background: #ffcc66;
+        text-align: center;
+        width: 1.39rem;
+        height: 0.41rem;
+        line-height: 0.41rem;
+        border-radius: 0.2rem;
+    }
+
+    #word {
+        width: 100%;
+        height: 3rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+    }
+
+    #word h3,
+    #para h3 {
+        color: #333;
+        font-size: 0.3rem;
+        line-height: 0.6rem
+    }
+
+    #word p {
+        color: #5a5a5a;
+        font-size: 0.23rem;
+        line-height: 0.5rem;
+    }
+
+    #para {
+        width: 100%;
+        height: 3.9rem;
+        padding: 0.1rem 0.2rem;
+        background: #fff;
+        margin-top: 0.1rem;
+        border-bottom: 1px solid #dedfe0;
+    }
+
+    #para p {
+        color: #333;
+        font-size: 0.3rem;
+        line-height: 0.5rem;
+    }
+
+    #para #bling {
+        vertical-align: middle;
+        width: 0.23rem;
+    }
+
+    #look {
+        display: block;
+        width: 100%;
+        height: 0.7rem;
+        color: #ff5c5c;
+        text-align: center;
+        font-size: 0.3rem;
+        line-height: 0.7rem;
+        background: #fff;
+    }
+
+    .go-on {
+        width: 100%;
+        height: 1rem;
+        line-height: 1rem;
+        text-align: center;
+        color: #666;
+        font-size: 0.27rem;
+    }
+
+    /* 脚 */
+    #out {
+        width: 100%;
+        height: 1rem;
+    }
+    .foot-b{
+        width: 100%;
+        height: 1rem;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        background: #fff;
+        display: flex;
+        justify-content: space-between;
+       
+      
+    }
+    .foot-b a{
+        display: block;
+        color: #333;
+        text-align: center;
+        font-size: 0.23rem;
+        padding: 0.2rem ;
+    }
+    .message{
+        width: 0.5rem;
+        height: 0.5rem;
+
+    }
+ 
+    
+    .shop-pre{
+        color: #fff;
+        font-size: 0.32rem;
+        background: #ff5c5c;
+        width: 4.94rem;
+        line-height: 0.8rem;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+
+    <!-- 内容区 -->
+    <div id="content">
+        <div>
+            <div class="head-pic">
+                <div id="outside">
+                    <div id="head">
+                        <div class="head_left"><img src="images/back.png" alt=""></div>
+                        <div class="head_center"><span class="head_title">套餐详情</span></div>
+                        <div class="head_right">
+                            <img src="images/yx-1.png" alt="">
+                            <img src="images/yx-2.png" alt="">
+                            <img src="images/yx-3.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="con-detail">
+                <div>
+                    <span id="plan">婚礼策划</span>
+                    <span>【爱丽丝】Tiffny主题婚礼</span>
+                </div>
+                <p><span class="price-now">￥35800</span><span class="price-pass">￥38800</span></p>
+                <p class="con-img"><span id="order">定</span> 可先付10740元定金</p>
+            </div>
+            <div class="shop">
+                <img src="images/yx-22.png" alt="">
+                <a href="###" class="sh-1">
+                    <div class="sh-des">
+                        <p>爱丽丝婚礼策划</p>
+                        <p>北京朝阳区西大望路珠江帝景B区7号楼120室</p>
+                    </div>
+                </a>
+                <a href="###" class="sh-2">进店逛逛</a>
+            </div>
+            <div id="word">
+                <h3>套餐描述</h3>
+                <p>适合150-200人的时尚高端定制婚礼</p>
+                <p>套餐报价包含：全套人员服务+室内仪式布置+全场灯光效果</p>
+                <p>套餐特色：配备单机位资深摄影团队+超高清双机位5D摄像团队</p>
+                <p>婚礼策划：全程享受一对一服务</p>
+            </div>
+            <div id="para">
+                <h3>套餐参数</h3>
+                <p><img src="images/yx-23.png" alt="" id="bling"> <span>团队</span></p>
+                <p>主持人 &#x3000;首席</p>
+                <p>化妆师 &#x3000;首席</p>
+                <p>摄影师 &#x3000;首席</p>
+                <p>摄像师 &#x3000;首席</p>
+            </div>
+            <a href="###" id="look">查看参数详情</a>
+            <p class="go-on">继续拖动查看图文详情</p>
+            <!-- 脚 -->
+            <div id="out">
+                <div class="foot-b">
+                    <a href="###" class="foot-1">
+                        <img class="message" src="images/yx-25.png" alt="">
+                    </a>
+                    <a href="###" class="foot-2">
+                        <img class="message" src="images/yx-26.png" alt="">
+                    </a>
+
+                    <a href="###" class="shop-pre">预约到店</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    new iScroll('content');
+
+</script>
+
+</html>

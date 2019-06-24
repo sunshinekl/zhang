@@ -1,0 +1,126 @@
+@import url(common.css);
+#head {
+  background: transparent; }
+  #head .head_right img {
+    margin-left: 0.3rem; }
+
+#content {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 1rem;
+  left: 0;
+  z-index: -1; }
+
+#box {
+  background: #f3f3f3; }
+
+.top {
+  font-size: 0;
+  background: #fff; }
+  .top img {
+    width: 100%; }
+  .top p {
+    padding: 0.2rem;
+    text-align: center;
+    font-size: 0.34rem;
+    color: #333; }
+  .top .money {
+    font-size: 0.32rem;
+    text-align: center; }
+    .top .money span {
+      color: #ff5c5c;
+      margin-right: 0.1rem; }
+    .top .money del {
+      color: #8e8e8e; }
+  .top .you {
+    padding: 0.2rem;
+    border-top: 1px solid #dedede;
+    margin-top: 0.2rem;
+    text-align: center;
+    font-size: 0.3rem;
+    color: #666; }
+    .top .you img {
+      width: 0.24rem;
+      margin-right: 0.05rem; }
+    .top .you span {
+      margin-right: 0.2rem; }
+
+.list li {
+  height: 0.9rem;
+  background: #fff;
+  margin-top: 0.2rem;
+  padding: 0 0.2rem;
+  font-size: 0; }
+  .list li img {
+    width: 0.7rem; }
+
+.list .item1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .list .item1 div {
+    width: 4.3rem; }
+    .list .item1 div p {
+      font-size: 0.32rem;
+      color: #333; }
+    .list .item1 div span {
+      font-size: 0.3rem;
+      color: #ccc; }
+  .list .item1 .item1_right {
+    text-align: center;
+    width: 1.6rem;
+    font-size: 0.32rem;
+    color: #fff;
+    background: #f39f28;
+    padding: 0.1rem;
+    border-radius: 0.2rem; }
+
+.list .item2 span {
+  font-size: 0.32rem;
+  color: #333;
+  margin-right: 0.1rem; }
+
+.list .item3 {
+  height: 1.4rem; }
+  .list .item3 p {
+    font-size: 0.32rem;
+    color: #333;
+    margin: 0.1rem 0; }
+  .list .item3 img {
+    margin-right: 0.2rem; }
+
+.more {
+  font-size: 0;
+  margin-top: 0.2rem;
+  display: none; }
+  .more img {
+    width: 100%; }
+
+.loadMore {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  text-align: center;
+  font-size: 0.3rem;
+  color: #333; }
+
+#footer {
+  padding: 0 0.2rem;
+  font-size: 0.36rem;
+  color: #fff; }
+  #footer .zixun {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    color: #333; }
+    #footer .zixun img {
+      width: 0.54rem;
+      margin-right: 0.2rem; }
+  #footer .add {
+    background: #f39f28;
+    padding: 0.1rem;
+    border-radius: 0.2rem; }
+  #footer .buy {
+    background: #ff5c5c;
+    padding: 0.1rem;
+    border-radius: 0.2rem; }

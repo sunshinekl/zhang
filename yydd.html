@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>预约到店</title>
+    <script src="js/autoRem.js"></script>
+    <link rel="stylesheet" href="css/head_foot.css">
+    <link rel="stylesheet" href="css/yydd.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_left" id="back"><img src="images/back.png" alt=""></div>
+        <div class="head_center"><span class="head_title">预约到店</span></div>
+        <div class="head_right"></div>
+    </div>
+    <!-- 内容 -->
+    <div id="content">
+        <div class="info">
+            <span>姓名</span>
+            <input type="text" placeholder="请输入真实姓名">
+        </div>
+        <div class="info">
+            <span>手机号码</span>
+            <input type="text" placeholder="请输入有效手机号">
+        </div>
+        <div class="con">
+            <p>婚礼纪独家优惠，预约即可领取</p>
+            <p><span>到店礼</span>预约即可领取梦妆高级化妆护肤品一套</p>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div id="footer">免费预约</div>
+</body>
+<script src="js/zepto.min.js"></script>
+<script>
+ //上一页
+ $('#back').click(function(){
+    window.history.back();
+})
+</script>
+</html>

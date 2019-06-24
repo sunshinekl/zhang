@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>注册</title>
+    <script src="js/autoRem.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/register.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <div id="head">
+        <div class="head_left" id="back"><img src="images/back.png" alt=""></div>
+        <div class="head_center"><span class="head_title">注册</span></div>
+        <div class="head_right"></div>
+    </div>
+    <hr>
+
+    <ul id="form">
+        <li id="phone">
+            <span>手机号</span>
+            <input type="text" id="user" placeholder="+86 请输入手机号">
+            <span id="del">×</span>
+        </li>
+
+        <li id="mess">
+            <input type="text" class="message">
+            <button id="send" class="send">获取验证码</button>
+        </li>
+
+        <li id='pass'>
+            <input type='password' id='password' placeholder='请输入密码'>
+        </li>
+    </ul>
+
+    <div id="btn">
+        <li class="err_tip"></li>
+        <a id="login">下一步</a>
+    </div>
+
+    <p>注册即表示同意<a href="">《婚礼纪用户使用协议》</a></p>
+</body>
+<script>
+    var tel_patt = /^1[34578]\d{9}$/; //手机格式
+    var pw_patt = /^(?!([a-zA-Z]+|\d+)$)[a-zA-Z\d]{6,12}$/; //密码格式
+    var telRes, pwRes;
+    var mess_num = '';
+
+    //手机验证
+    $("#user").blur(function () {
+        telRes = tel_patt.test($(this).val());
+        if (!telRes) {
+            $(this).parent().css("borderBottom", "1px solid red");
+            $(this).css("color", "red");
+        }
+    }).focus(function () {
+        $(this).parent().css("borderBottom", "1px solid #dedfe0");
+        $(this).css("color", "black");
+    })
+
+    // 密码验证
+    $("#password").blur(function () {
+        pwRes = pw_patt.test($(this).val());
+        if (!pwRes) {
+            $(this).parent().css("borderBottom", "1px solid red");
+            $(this).css("color", "red");
+        }
+    }).focus(function () {
+        $(this).parent().css("borderBottom", "1px solid #dedfe0");
+        $(this).css("color", "black");
+    })
+
+    // 删除
+    $("#del").click(function () {
+        $("#user").val("");
+        $('.err_tip').html("");
+        $("#user").parent().css("borderBottom", "1px solid #dedfe0");
+    })
+
+    //短信验证
+    $("#send").click(function () {
+        $(this).attr("a", "1");
+        $('.err_tip').html('');
+        var time = 60;
+        $('#send').prop("disabled", "disabled");
+        var timer = setInterval(function () {
+            time--;
+            $('#send').html(time + '秒后重新发送').addClass('on');
+        }, 1000);
+        setTimeout(function () {
+            clearInterval(timer);
+            $('#send').prop("disabled", false).html('获取验证码').removeClass('on');
+
+        }, 60000);
+        var str = '0123456789';
+        for (var i = 0; i < 6; i++) {
+            mess_num += str.charAt(Math.floor(Math.random() * str.length));
+        }
+        console.log(mess_num);
+        //短信API
+        $.ajax({
+            url: 'http://v.juhe.cn/sms/send',
+            type: 'GET',
+            data: {
+                mobile: $('#user').val(),
+                tpl_id: '124128',
+                tpl_value: '%23code%23%3D' + mess_num,
+                key: '766944d9a9d629a76c190f2ed6cf8edc',
+            },
+            dataType: 'jsonp',
+
+            jsonpCallback: 'callback'
+        });
+
+    })
+
+    // 登录
+    $("#login").click(function () {
+        // 手机验证
+        if (telRes && !($("#mess").attr("have"))) {
+
+            $("#mess").css("display", "flex").attr("have", "yes");
+            $('.err_tip').html('');
+
+        } else if (!$("#user").val()) {
+
+            $('.err_tip').html('手机号不能为空');
+
+        } else if (telRes && ($("#mess").attr("have")) && !($("#send").attr("a"))) { //没有点击获取验证码，直接点击下一步。
+
+            $('.err_tip').html('请先获取验证码');
+
+        } else if ((!telRes) && ($("#user").val())) {
+
+            $('.err_tip').html('手机号格式错误');
+
+
+            //验证码验证
+        } else if (($('.message').val()) && ($('.message').val() == mess_num) && !($("#pass").attr("have"))) {
+
+            $("#pass").css("display", "block").attr("have", "yes");
+            $('.err_tip').html("");
+            $('.message').css("borderBottom", '1px solid #dedfe0')
+
+        } else if (($('.message').val()) && ($('.message').val() != mess_num) && !($("#pass").attr("have"))) {
+
+            $('.err_tip').html('验证码错误');
+            $('.message').val('').css("borderBottom", '1px solid red');
+        } else if (!($('.message').val())) {
+
+            $('.err_tip').html('验证码不能为空');
+            $('.message').val('').css("borderBottom", '1px solid red');
+
+            // 密码验证
+        }else if(!$("#password").val()){
+
+            $('.err_tip').html('密码不能为空');
+
+        }else if(($("#password").val())&&(!pwRes)){
+
+            $('.err_tip').html('密码须包含数字、英文6~12位字符');
+
+        }else{
+
+            $(this).html("注册成功").css("background","#ff5c5c");
+            $('.err_tip').html('');
+            location.href="login.html";
+        }
+
+    })
+</script>
+
+</html>

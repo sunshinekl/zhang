@@ -1,0 +1,231 @@
+@import url(common.css);
+#content {
+  position: absolute;
+  left: 0;
+  top: 0.86rem;
+  bottom: 1rem;
+  width: 100%; }
+  #content #box {
+    background: #f3f3f3;
+    padding-bottom: 0.2rem; }
+    #content #box .care {
+      font-size: 0;
+      background: #fff; }
+      #content #box .care img {
+        width: 100%; }
+      #content #box .care ul {
+        width: 100%;
+        margin-top: 0.3rem;
+        padding: 0.2rem; }
+        #content #box .care ul li {
+          line-height: 0.6rem;
+          text-align: center;
+          font-size: 0.34rem;
+          color: #333; }
+          #content #box .care ul li:nth-child(2) {
+            color: #666;
+            font-size: 0.3rem; }
+          #content #box .care ul li:nth-child(3) {
+            color: #8e8e8e;
+            font-size: 0.3rem; }
+          #content #box .care ul li:nth-child(4) {
+            width: 1.54rem;
+            color: #ff5c5c;
+            border: 1px solid #ff5c5c;
+            border-radius: 0.05rem;
+            margin: 0 auto; }
+    #content #box .info {
+      width: 100%;
+      margin-top: 0.18rem; }
+      #content #box .info li {
+        background: #fff;
+        margin-bottom: 0.18rem;
+        height: 0.75rem;
+        line-height: 0.75rem;
+        font-size: 0.3rem;
+        color: #333;
+        padding-left: 0.2rem; }
+      #content #box .info .list1 span:nth-child(1) {
+        background: #ff5c5c;
+        color: #fff;
+        padding: 0 0.1rem;
+        margin-right: 0.1rem; }
+      #content #box .info .list2 span:nth-child(1) {
+        color: #ff5c5c;
+        border: 1px solid #ff5c5c;
+        padding: 0 0.2rem;
+        border-radius: 3px;
+        margin-right: 0.1rem; }
+      #content #box .info .list2 a {
+        color: #208ee2; }
+  #content .tc1 {
+    width: 100%;
+    height: 3.24rem;
+    background: #fff;
+    padding: 0.2rem;
+    margin-bottom: 0.24rem; }
+    #content .tc1 .tc1_bo {
+      margin-top: 0.24rem;
+      display: flex;
+      justify-content: space-between;
+      position: relative; }
+      #content .tc1 .tc1_bo img {
+        width: 2.37rem;
+        height: 2.16rem; }
+      #content .tc1 .tc1_bo div {
+        width: 4.5rem; }
+      #content .tc1 .tc1_bo p:nth-child(1) {
+        font-size: 0.3rem;
+        color: #333; }
+      #content .tc1 .tc1_bo p:nth-child(2) {
+        position: absolute;
+        bottom: 0.2rem;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        width: 4.5rem;
+        font-size: 0; }
+        #content .tc1 .tc1_bo p:nth-child(2) span:nth-child(1) {
+          font-size: 0.3rem;
+          color: #ff5c5c;
+          margin-right: 0.1rem; }
+        #content .tc1 .tc1_bo p:nth-child(2) span:nth-child(3) {
+          font-size: 0.3rem;
+          color: #333;
+          float: right; }
+        #content .tc1 .tc1_bo p:nth-child(2) del {
+          font-size: 0.26rem;
+          color: #9f9f9f; }
+  #content .tc_type {
+    font-size: 0.34rem;
+    color: #333;
+    font-weight: normal; }
+  #content .tc2 {
+    background: #fff; }
+    #content .tc2 h3 {
+      padding: 0.2rem 0.2rem 0; }
+    #content .tc2 .tc_info li {
+      height: 3.5rem;
+      position: relative;
+      width: 100%;
+      margin-top: 0.16rem; }
+      #content .tc2 .tc_info li img {
+        width: 100%; }
+      #content .tc2 .tc_info li div {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 0.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 0.2rem;
+        font-size: 0.3rem;
+        color: #fff;
+        background-color: rgba(102, 102, 102, 0.4); }
+        #content .tc2 .tc_info li div .star img {
+          width: 0.3rem; }
+  #content .more {
+    height: 0.6rem;
+    width: 100%;
+    text-align: center;
+    line-height: 0.6rem;
+    font-size: 0.3rem;
+    color: #666; }
+  #content .daily {
+    margin: 0.14rem 0 0.07rem;
+    background: #fff; }
+    #content .daily li:nth-child(1) {
+      padding-left: 0.2rem; }
+      #content .daily li:nth-child(1) div {
+        display: inline-block; }
+      #content .daily li:nth-child(1) .time1 {
+        width: 0.45rem; }
+        #content .daily li:nth-child(1) .time1 span {
+          display: block; }
+        #content .daily li:nth-child(1) .time1 .day {
+          font-size: 0.3rem;
+          color: #000;
+          font-weight: bold; }
+        #content .daily li:nth-child(1) .time1 .month {
+          font-size: 0.28rem;
+          color: #333; }
+      #content .daily li:nth-child(1) .time2 {
+        height: 0.8rem;
+        font-size: 0;
+        margin-left: -0.2rem; }
+        #content .daily li:nth-child(1) .time2 span {
+          font-size: 0.28rem;
+          color: #8e8e8e; }
+        #content .daily li:nth-child(1) .time2 p {
+          font-size: 0.28rem;
+          color: #333; }
+    #content .daily li:nth-child(2) {
+      padding: 0.12rem 0.2rem 0.12rem 0.63rem;
+      display: flex;
+      justify-content: space-around; }
+      #content .daily li:nth-child(2) img {
+        width: 2.18rem;
+        height: 1.06rem; }
+
+.share {
+  position: absolute;
+  display: none;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4); }
+  .share ul {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5.2rem;
+    background: #fff;
+    z-index: 5; }
+    .share ul .share_to {
+      height: 4.2rem;
+      display: flex;
+      /*  justify-content: space-around; */
+      flex-wrap: wrap;
+      align-items: center; }
+      .share ul .share_to a {
+        display: block;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 1.8rem;
+        height: 1.3rem;
+        font-size: 0.26rem;
+        color: #333; }
+        .share ul .share_to a span {
+          display: block;
+          width: 100%;
+          text-align: center; }
+      .share ul .share_to img {
+        width: 0.8rem;
+        height: 0.8rem; }
+    .share ul .cancel {
+      height: 1rem;
+      line-height: 1rem;
+      text-align: center;
+      border-top: 1px solid #ff5c5c;
+      font-size: 0.38rem;
+      color: #ff5c5c; }
+
+#footer {
+  padding-left: 0.2rem; }
+  #footer .call {
+    width: 4.5rem;
+    line-height: 1rem;
+    background: #ff5c5c;
+    text-align: center;
+    font-size: 0.36rem;
+    color: #fff; }
+  #footer a span {
+    font-size: 0.28rem; }
+  #footer a img {
+    width: 0.48rem;
+    height: 0.48rem; }

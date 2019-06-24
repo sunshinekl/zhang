@@ -1,0 +1,114 @@
+@import "common.css";
+$color:#ff5c5c;
+@mixin font($size,$col) {
+    font-size: #{$size}rem;
+    color: $col;
+}
+// 头部
+#head{
+    border-bottom: 1px solid #dedede;
+    .head_left{
+        height: 100%;
+        position: relative;
+        input{
+            height: 100%;
+            width: 5.82rem;
+            border: none;
+            background: #f3f3f3;
+            border-radius:0.4rem;
+            padding-left: 0.8rem;
+            font-size: 0.3rem;
+        }
+        img{
+            position: absolute;
+            width: 0.4rem;
+            height: 0.4rem;
+            left: 0.4rem;
+            top: 50%;
+            margin-top: -0.2rem;
+        }
+    }
+}
+// 内容
+
+#content{
+    position: absolute;
+    top: 0.86rem;
+    bottom: 1rem;
+    left: 0;
+    width: 100%;
+}
+#box{
+    background: #f3f3f3;
+    .box_title{
+        @include font(0.36,#333);
+        padding:0.3rem 0.16rem 0.1rem;
+        font-weight: normal;
+    }
+    .com{
+        background: #fff;
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 0 0.35rem 0.2rem;
+            height:5.6rem;
+            a{
+                display: block;
+                width: 1.7rem;
+                font-size: 0;
+                text-align: center;
+                img{
+                    width: 1rem;
+                }
+                span{
+                    margin-top: 0.1rem;
+                    display: block;
+                    @include font(0.3,#333);
+                }
+            }
+        }
+    }
+    .caigou{
+        margin-top: 0.12rem;
+        div{
+            height: 3.3rem;
+            img{
+                width: 0.7rem;
+                height: 0.85rem;
+            }
+        }
+    }
+    .hot{
+        margin-top: 0.12rem;
+        background: #fff;
+
+        table{
+            margin-top: 0.2rem;
+            border-collapse: collapse;
+            
+            tr{
+                height: 0.6rem;
+
+                td{
+                    border: 1px solid #dedede;
+                    border-left: none;
+                    width:2.5rem;
+                    text-align: center;
+                    @include font(0.32,#333); 
+                }
+            }
+        }
+    }
+}
+// 底部
+#footer{
+    a{
+        &:nth-child(2){
+            span{
+                color: $color;
+            }
+           
+        }
+    }
+}
